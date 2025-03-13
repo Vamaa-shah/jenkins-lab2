@@ -26,12 +26,11 @@ pipeline {
             }
         }
 
-        stage('Notify') {
-            steps {
-                mail to: 'your-email@conestogac.on.ca',
-                     subject: 'Jenkins Build Notification',
-                     body: "Build completed: ${env.BUILD_URL}"
-            }
-        }
+       stage('Notify') {
+    steps {
+        echo 'Skipping email notification for now'
+    }
+}
+
     }
 }
